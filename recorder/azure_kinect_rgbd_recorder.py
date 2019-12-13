@@ -8,7 +8,7 @@ import numpy as np
 
 class ViewerWithCallback:
 
-    def __init__(self, config, device, align_depth_to_color=True):
+    def __init__(self, config, device, align_depth_to_color):
         self.flag_exit = False
         self.align_depth_to_color = align_depth_to_color
 
@@ -156,9 +156,11 @@ if __name__ == '__main__':
         print('Unsupported device id, fall back to 0')
         device = 0
 
+    align_depth_to_color = args.align_depth_to_color
+
     # v = PCDViewerWithCallback(config, device)
     # v.run_pointcloud()
 
-    v = ViewerWithCallback(config, device)
+    v = ViewerWithCallback(config, device, align_depth_to_color)
     v.run()
     
