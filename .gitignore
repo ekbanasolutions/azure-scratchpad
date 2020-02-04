@@ -1,3 +1,4 @@
 #Data Folder
 recorder/azure_data/
 */build/
+.pyc
